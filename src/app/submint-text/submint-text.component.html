@@ -1,0 +1,11 @@
+<div>
+  <input
+    type="text"
+    #searchInput
+    (keyup.enter)="submitText.emit(searchInput.value); searchInput.value = ''"
+  />
+
+  <button (click)="submitText.emit(searchInput.value); searchInput.value = ''">
+    add new task
+  </button>
+</div>

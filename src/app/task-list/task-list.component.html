@@ -1,0 +1,10 @@
+<ul class="bg-green-300">
+  <li class="p-2" *ngFor="let task of tasks">
+    <p
+      [ngClass]="{ 'line-through': task.done }"
+      (click)="changeTaskStatus(task, $event)"
+    >
+      name : {{ task.name }}
+    </p>
+  </li>
+</ul>
