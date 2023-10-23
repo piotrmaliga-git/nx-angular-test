@@ -4,6 +4,8 @@ import { Tasks } from './shared/models/tasks.model';
 import { NgClass, NgFor } from '@angular/common';
 import { TaskListComponent } from './task-list/task-list.component';
 import { SubmintTextComponent } from './submint-text/submint-text.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   standalone: true,
@@ -13,6 +15,8 @@ import { SubmintTextComponent } from './submint-text/submint-text.component';
     NgClass,
     TaskListComponent,
     SubmintTextComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   selector: 'myorg-root',
   templateUrl: './app.component.html',
