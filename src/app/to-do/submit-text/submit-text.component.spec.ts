@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SubmintTextComponent } from './submint-text.component';
+import { SubmitTextComponent } from './submit-text.component';
 
-describe('SubmintTextComponent', () => {
-  let component: SubmintTextComponent;
-  let fixture: ComponentFixture<SubmintTextComponent>;
+describe.only('SubmitTextComponent', () => {
+  let component: SubmitTextComponent;
+  let fixture: ComponentFixture<SubmitTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SubmintTextComponent],
+      imports: [SubmitTextComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SubmintTextComponent);
+    fixture = TestBed.createComponent(SubmitTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

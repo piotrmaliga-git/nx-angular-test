@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Tasks } from '../shared/models/tasks.model';
+import { Tasks } from '../../shared/models/tasks.model';
 
 @Component({
   selector: 'myorg-task-list',

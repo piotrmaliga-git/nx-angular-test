@@ -1,14 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
-  selector: 'myorg-submint-text',
+  selector: 'myorg-submit-text',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './submint-text.component.html',
-  styleUrls: ['./submint-text.component.scss'],
+  templateUrl: './submit-text.component.html',
+  styleUrls: ['./submit-text.component.scss'],
 })
-export class SubmintTextComponent {
+export class SubmitTextComponent {
   @Output() submitText = new EventEmitter<string>();
 }
