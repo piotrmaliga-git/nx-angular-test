@@ -1,0 +1,19 @@
+name: run unit tests
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  steps:
+    - users: actions/checkout@v2
+    - users: actions/setup-node@v2
+      with:
+        node-version: 18.15.12
+      - run: npm ci
+      - run: ng test
