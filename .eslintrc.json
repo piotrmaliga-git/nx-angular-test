@@ -30,7 +30,17 @@
       "files": ["*.html"],
       "extends": ["plugin:@nx/angular-template"],
       "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["e2e/**/*.{ts,js,tsx,jsx}"],
+      "rules": {}
     }
   ],
-  "extends": ["./.eslintrc.base.json"]
+  "extends": ["plugin:playwright/recommended", "./.eslintrc.base.json"],
+  "plugins": ["@nx"]
 }
