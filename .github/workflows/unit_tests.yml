@@ -24,3 +24,4 @@ jobs:
       - uses: mansagroup/nrwl-nx-action@v3
         with:
           targets: test
+          all: 'true'
