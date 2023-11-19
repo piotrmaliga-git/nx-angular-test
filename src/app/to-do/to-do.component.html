@@ -1,4 +1,4 @@
-<myorg-submit-text (submitText)="addTask($event)" />
+<myorg-submit-text />
 <myorg-task-list *ngIf="listState.state === 'success'" [tasks]="tasks" />
 <p *ngIf="listState.state === 'error'">{{ listState.error.message }}</p>
 <p *ngIf="listState.state === 'loading'">Loading...</p>

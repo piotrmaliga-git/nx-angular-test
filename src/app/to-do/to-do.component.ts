@@ -33,7 +33,7 @@ type ListFetchingError = { status: number; message: string };
   templateUrl: './to-do.component.html',
   styleUrls: ['./to-do.component.scss'],
 })
-export class ToDoComponent implements OnInit {
+export class ToDoComponent {
   tasks: Tasks[] = [];
 
   loading = true;
@@ -49,29 +49,4 @@ export class ToDoComponent implements OnInit {
   listState: ComponentListState = { state: 'init' };
 
   private readonly URL = 'http://localhost:3000';
-
-  constructor() {
-    // this.listState = { state: 'loading' };
-    // console.log(this.tasks);
-    // const jsonfileUrl = 'db.json';
-    // if (Array.isArray(this.tasks)) {
-    //   this.listState = {
-    //     state: 'success',
-    //     results: this.tasks,
-    //   };
-    // } else {
-    //   this.listState = {
-    //     state: 'error',
-    //     error: { status: this.statusError, message: this.messageError },
-    //   };
-    // }
-  }
-
-  public addTask(name: string): void {
-    // this.tasks.push({
-    //   id,
-    //   name,
-    //   done: false,
-    // });
-  }
 }

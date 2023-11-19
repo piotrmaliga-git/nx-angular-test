@@ -13,5 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: npm install
+        run: npm ci
+
       - name: lint check
-        run: npm run lint myorg
+        run: nx lint myorg
