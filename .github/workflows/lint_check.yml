@@ -17,4 +17,4 @@ jobs:
         run: npm ci
 
       - name: lint check
-        run: nx lint myorg
+        run: npm run lint myorg
