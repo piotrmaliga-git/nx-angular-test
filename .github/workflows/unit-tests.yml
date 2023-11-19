@@ -1,0 +1,19 @@
+name: Unit tests
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  install-and-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: npm install
+        run: npm ci
+
+      - name: run unit tests
+        run: nx test
