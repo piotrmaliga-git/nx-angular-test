@@ -13,3 +13,5 @@
 - [ ] Tests for the changes have been added (unit test)
 - [ ] i18n duplication checked
 - [ ] Imports only from shared or Journey level
+
+### Please check it !!!
