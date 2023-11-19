@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Tasks } from '../shared/models/tasks.model';
 import { SubmitTextComponent } from './submit-text/submit-text.component';
 import { TaskListComponent } from './task-list/task-list.component';

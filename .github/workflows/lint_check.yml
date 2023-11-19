@@ -16,5 +16,8 @@ jobs:
       - name: npm install
         run: npm ci
 
+      - name: install lint
+        run: npm i --save-dev @nx/eslint
+
       - name: lint check
-        run: npm run lint myorg
+        run: nx lint myorg
