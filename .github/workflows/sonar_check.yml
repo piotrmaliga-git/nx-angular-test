@@ -13,5 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
       - name: run sonar check
         run: npm run sonar

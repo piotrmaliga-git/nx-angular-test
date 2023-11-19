@@ -23,7 +23,7 @@ jobs:
 
       - uses: mansagroup/nrwl-nx-action@v3
         with:
-          targets: test
+          targets: e2e
           all: 'true'
 
       # - name: Install Playwright Browsers
