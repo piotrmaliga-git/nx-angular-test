@@ -1,11 +1,11 @@
-name: Unit tests
+name: Build check
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  unit-tests:
+  build-check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -16,5 +16,7 @@ jobs:
       - name: npm install
         run: npm ci
 
-      - name: run unit tests
-        run: npm run test
+      - uses: mansagroup/nrwl-nx-action@v3
+        with:
+          targets: build
+          all: 'true'

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SubmitTextComponent } from './submit-text.component';
 
-describe.only('SubmitTextComponent', () => {
+describe('SubmitTextComponent', () => {
   let component: SubmitTextComponent;
   let fixture: ComponentFixture<SubmitTextComponent>;
 
