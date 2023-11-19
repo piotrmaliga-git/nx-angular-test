@@ -19,4 +19,4 @@ jobs:
       - uses: mansagroup/nrwl-nx-action@v3
         with:
           targets: build
-          affected: 'true'
+          all: 'true'
