@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Tasks } from '../shared/models/tasks.model';
 import { SubmitTextComponent } from './submit-text/submit-text.component';
 import { TaskListComponent } from './task-list/task-list.component';
-import { HttpClient } from '@angular/common/http';
 
 type InitState = {
   state: 'init';
@@ -66,14 +65,6 @@ export class ToDoComponent implements OnInit {
     //     error: { status: this.statusError, message: this.messageError },
     //   };
     // }
-  }
-
-  ngOnInit() {
-    // fetch(`${this.URL}/tasks`)
-    //   .then((res) => res.json())
-    //   .then((json) => {
-    //     this.tasks = json;
-    //   });
   }
 
   public addTask(name: string): void {
