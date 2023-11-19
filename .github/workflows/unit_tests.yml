@@ -16,5 +16,7 @@ jobs:
       - name: npm install
         run: npm ci
 
-      - name: run unit tests
-        run: npm run test
+      - uses: mansagroup/nrwl-nx-action@v3
+        with:
+          targets: test
+          all: 'true'
