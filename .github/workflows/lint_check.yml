@@ -13,11 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: npm install
-        run: npm ci
-
-      - name: install lint
-        run: npm i --save-dev @nx/eslint
-
-      - name: lint check
-        run: nx lint myorg
+      - uses: mansagroup/nrwl-nx-action@v3
+        with:
+          targets: lint
+          all: 'true'
+          parallel: 1
