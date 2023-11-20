@@ -14,3 +14,9 @@ jobs:
 
       - name: npm install
         run: npm ci
+
+      - name: run sonar scan
+        uses: mansagroup/nrwl-nx-action@v3
+        with:
+          targets: sonar
+          all: 'true'
