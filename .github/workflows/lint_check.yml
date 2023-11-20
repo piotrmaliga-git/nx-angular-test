@@ -1,4 +1,4 @@
-name: Lint check
+name: Format & Lint check
 
 on:
   pull_request:
@@ -23,6 +23,6 @@ jobs:
       - name: run linter
         uses: mansagroup/nrwl-nx-action@v3
         with:
-          targets: lint
+          targets: format:check, lint
           all: 'true'
           parallel: 1
