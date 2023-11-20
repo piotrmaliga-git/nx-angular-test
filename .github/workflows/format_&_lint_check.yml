@@ -6,6 +6,7 @@ on:
 
 jobs:
   format-and-lint-check:
+    name: Format & Lint check
     runs-on: ubuntu-latest
     timeout-minutes: 30
 

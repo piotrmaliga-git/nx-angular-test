@@ -6,6 +6,7 @@ on:
 
 jobs:
   build-check:
+    name: Build check
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
