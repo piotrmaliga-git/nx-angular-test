@@ -5,23 +5,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   selector: 'myorg-footer',
   standalone: true,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   imports: [MatToolbarModule],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
