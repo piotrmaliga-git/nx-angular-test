@@ -13,11 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: install dependencies
         run: npm ci
-
-      # - name: Install Playwright Browsers
-      #   run: npx playwright install --with-deps
 
       - name: run e2e tests
         uses: mansagroup/nrwl-nx-action@v3

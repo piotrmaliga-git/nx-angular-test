@@ -6,8 +6,9 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "sonar": "sonar-scanner",
-    "api": "json-server --watch db.json"
+    "test:coverage": "",
+    "e2e": "nx e2e --skipInstall",
+    "sonar": "sonar-scanner"
   },
   "private": true,
   "dependencies": {
