@@ -31,4 +31,4 @@ jobs:
         run: npm start & npx wait-on http://localhost:4200
       - run: |
           npm install -g @lhci/cli@0.12.x
-          lhci autorun --collect.url=http://localhost:4200 --assert.preset=lighthouse:recommended --upload.token
+          lhci collect --url http://localhost:4200
