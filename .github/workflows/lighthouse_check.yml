@@ -30,4 +30,4 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
-          lhci collect --url http://localhost:4200
+          lhci autorun --collect.url=http://localhost:4200 --assert.preset=lighthouse:recommended --upload.token
