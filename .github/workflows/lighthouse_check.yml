@@ -20,8 +20,14 @@ jobs:
 
       - name: npm install, build
         run: |
-          npm install
-          npm run build
+          npm ci
+
+      - name: build application
+        uses: mansagroup/nrwl-nx-action@v3
+        with:
+          targets: build
+          all: 'true'
+
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
