@@ -1,11 +1,12 @@
-name: Lint check
+name: Lighthouse
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  lint-check:
+  lighthouse:
+    name: Lighthouse
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -17,12 +18,17 @@ jobs:
         with:
           node-version: 18
 
-      - name: npm install
+      - name: npm install, build
         run: npm ci
 
-      - name: run linter
+      - name: build application
         uses: mansagroup/nrwl-nx-action@v3
         with:
-          targets: lint
+          targets: build
           all: 'true'
-          parallel: 1
+
+      - name: run Lighthouse CIii
+        run: npm start & npx wait-on http://localhost:4200
+      - run: |
+          npm install -g @lhci/cli@0.12.x
+          lhci collect --url http://localhost:4200

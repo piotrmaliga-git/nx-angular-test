@@ -5,9 +5,14 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "sonar": "sonar-scanner",
-    "api": "json-server --watch db.json"
+    "format": "prettier --write ./src",
+    "format:all": "prettier --write *",
+    "lint": "nx lint myorg",
+    "unit-tests": "nx test",
+    "unit-tests:coverage": "nx test --coverage",
+    "e2e-tests": "playwright test --output build --workers 2",
+    "e2e-tests:debug": "playwright test --output build --debug",
+    "e2e-tests:headed": "playwright test --output build --headed"
   },
   "private": true,
   "dependencies": {

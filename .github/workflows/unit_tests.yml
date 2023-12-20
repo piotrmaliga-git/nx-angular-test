@@ -6,6 +6,7 @@ on:
 
 jobs:
   unit-tests:
+    name: Unit Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -17,11 +18,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: npm install
+      - name: instal dependencies
         run: npm ci
 
       - name: run unit tests
         uses: mansagroup/nrwl-nx-action@v3
         with:
-          targets: test
+          targets: unit-tests
           all: 'true'

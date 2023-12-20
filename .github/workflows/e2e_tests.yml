@@ -1,4 +1,4 @@
-name: e2e tests
+name: E2E tests
 
 on:
   pull_request:
@@ -6,27 +6,18 @@ on:
 
 jobs:
   e2e-test:
+    name: E2E tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: install dependencies
         run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
 
       - name: run e2e tests
         uses: mansagroup/nrwl-nx-action@v3
         with:
-          targets: e2e
+          targets: e2e-tests
           all: 'true'
-
-      # - uses: actions/upload-artifact@v3
-      #   if: always()
-      #   with:
-      #     name: playwright-report
-      #     path: playwright-report/
-      #     retention-days: 30
