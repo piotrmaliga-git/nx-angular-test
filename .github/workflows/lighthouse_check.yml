@@ -27,7 +27,7 @@ jobs:
           targets: build
           all: 'true'
 
-      - name: run Lighthouse CI
+      - name: run Lighthouse CIii
         run: npm start & npx wait-on http://localhost:4200
       - run: |
           npm install -g @lhci/cli@0.12.x
