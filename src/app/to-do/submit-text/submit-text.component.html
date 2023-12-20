@@ -1,6 +1,8 @@
 <div>
+  <label for="firstname">First name:</label>
   <input
     type="text"
+    id="firstname"
     #searchInput
     (keyup.enter)="submitText.emit(searchInput.value); searchInput.value = ''" />
 
